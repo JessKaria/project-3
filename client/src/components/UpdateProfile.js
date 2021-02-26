@@ -22,6 +22,8 @@ export default function UpdateProfileModal(props) {
     })
       .then(({ data }) => {
         updateFormData(data)
+        console.log(data)
+        console.log(formData)
       })
   }, [])
 
@@ -115,7 +117,7 @@ export default function UpdateProfileModal(props) {
 
 
               <form className='field'>
-
+              
 
                 <div className='field'>
                   <label className='label-text'>Username</label>
