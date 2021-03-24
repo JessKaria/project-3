@@ -15,6 +15,7 @@ For our third project at General Assembly, we were asked to build a full-stack w
 * [Fabien Depasse](https://github.com/fdepasse)
 * [Kate Joyce](https://github.com/kate1562)
 * [Emily Randall](https://github.com/emilyrandall1998)
+* and Me!
 
 ## Brief
 
