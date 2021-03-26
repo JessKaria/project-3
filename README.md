@@ -8,7 +8,7 @@
 
 
 ## Overview
-For our third project at General Assembly, we were asked to build a full-stack web application by building our own front and back-end, we were paired in a group of 4 and given 7 days to complete the project. For the planning phase we worked in a group over Zoom and Slack ensuring all of ur contributed to the ideation phase. Each day we had a stand-up discussing roadblocks and any other issues we may have been facing. 
+For our third project at General Assembly, we were asked to build a full-stack web application by building our own front and back-end, we were paired in a group of 4 and given 7 days to complete the project. For the planning phase we worked in a group over Zoom and Slack ensuring all of us contributed to the ideation phase. Each day we had a stand-up discussing roadblocks and any other issues we may have been facing. 
 
 ## Team 🤞
 
