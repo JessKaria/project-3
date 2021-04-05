@@ -1,6 +1,3 @@
-# README
-
-
 ### ![GA](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png) General Assembly, SEI 
 
 
@@ -23,7 +20,7 @@ For our third project at General Assembly, we were asked to build a full-stack w
 * **Use an Express API** to serve your data from a Mongo database
 * **Consume your API with a separate front-end** built with React
 * **Be a complete product** with multiple relationships and CRUD functionality for at least a couple of models.
-* **Implement thoughtful user stories/wireframes** that are significant enough to understand what what your MVP will be.
+* **Implement thoughtful user stories/wireframes** that are significant enough to understand what your MVP will be.
 * **Have a visually impressive design** 
 * **Be deployed online** so it's publicly accessible.
 * **Have automated tests** for _at least_ one RESTful resource on the back-end.
@@ -67,7 +64,7 @@ From the beginning of the project, we had a high level of communication. We kick
 
 ![here](https://github.com/JessKaria/project-3/blob/main/Timeline.png?raw=true)
 
-We worked collabortively to design our backend, from our models right through to sudo-coding controllers, once we were agreed on the functionality and what our MVP was be then started dividing responsibility of the project.
+We worked collaboratively to design our backend, from our models right through to sudo-coding controllers, once we were agreed on the functionality and what our MVP was be then started dividing responsibility of the project.
 
 * Back-end - Day 2, 3, 4
 * Front-end - Day 4, 5, 6, 7
@@ -81,7 +78,7 @@ We all collaborated on designing the user journey and with it being our first ti
 
 ## User Models
 
-It was my responsibility to deliver user registration, login, profile update and recipe editing functionality and all the suppoting MVC structure. For email validation I opted use RegEx over a package, I also decided to add in some friendly error handling which I could then render on the front end. In addition the user models also two arrays for recipes a user has saved and also posted.
+It was my responsibility to deliver user registration, login, profile update and recipe editing functionality and all the supporting MVC structure. For email validation I opted to use RegEx over a package, I also decided to add in some friendly error handling which I could then render on the front end. In addition the user models also two arrays for recipes a user has saved and also posted.
 
 For password encryption we use bcrypt along with a mongoose validator to encrypt the passwords and validator for email verification.
 
@@ -105,7 +102,7 @@ const userSchema = new mongoose.Schema({
     }
   },
   image: { type: String },
-  password: { type: String, required: true, minlength: 8, message: 'Password must be more than 8 character...' },
+  password: { type: String, required: true, minlength: 8, message: 'Password must be more than 8 characters...' },
   isAdmin: { type: Boolean },
   savedRecipes: [{ type: mongoose.Schema.ObjectId, ref: 'Recipes' }],
   postedRecipes: [{ type: mongoose.Schema.ObjectId, ref: 'Recipes' }]
@@ -117,7 +114,7 @@ const userSchema = new mongoose.Schema({
 
 We all collaborated on our MVC and tested the routes we were responsible for, we all ran tests on Insomnia asking ourselves the following questions for each request. 
 
-* Sending a blank response do I get a response?
+* Sending a blank response, do I get a response?
 * Do I get the correct response?
 * Do I get the correct data and only what information I need?
 * Can I access the data without authentication?
@@ -126,14 +123,14 @@ We all collaborated on our MVC and tested the routes we were responsible for, we
 * Do I get the correct response when sending the wrong JSON data?
 * Do I get the correct data when authentication and JSON are correct?
 
-Once I was happy with the outputs I looked at setting up a testing enviroment to run some more stress tests on form validation. For testing we used, Mocha, Chai & Supertest. I created a bunch of tests to stress error inputs and to ensure the validation we had created was robust.
+Once I was happy with the outputs I looked at setting up a testing environment to run some more stress tests on form validation. For testing we used Mocha, Chai & Supertest. I created a bunch of tests to stress error inputs and to ensure the validation we had created was robust.
 
 ```
 import { expect } from 'chai'
 import setup from './lib/setup.js'
 import tearDown from './lib/tearDown.js'
 
-// Test user end points
+// Test user endpoints
 describe('Testing user end point', () => {
   beforeEach(done => {
     setup(done)
@@ -286,7 +283,7 @@ describe('Testing user end point', () => {
 
 ![here](https://github.com/JessKaria/project-3/blob/main/Home.png?raw=true)
 
-Once we felt comfortable that our back-end was correctly built and our requests were returning the correct responses, we turned our attention to designing the front-end. We started to again divide tasks based on the routes we were responsible for which made things easier. As my team turned their attention to each of their pages - I moved on to navigation, login and registraion.
+Once we felt comfortable that our back-end was correctly built and our requests were returning the correct responses, we turned our attention to designing the front-end. We started to again divide tasks based on the routes we were responsible for which made things easier. As my team turned their attention to each of their pages - I moved on to navigation, login and registration.
 
 In the handleSubmit() function I was able to render the error messages created in the user model, as well as passing in { history } so we could then push users who completed the form to login.
 
@@ -359,7 +356,7 @@ export default function Register({ history }) {
 
 ## Edit Recipe
 
-One of the features we wanted to build, was the ability for users to be able to edit their accounts and recipes, we achieved this with a simple PUT request but we were able to pre-populate those fields by executing a fetch request on the page load and then spread the data across the form fields. For our recipe model, some of our form choices expected an array, we manged this with preset of option through React Select, however we also used React Select that allowed us to create new options and save them as string within an array. This was perfect for when users wanted to add free text in for ingredients of a recipe for example.
+One of the features we wanted to build was the ability for users to be able to edit their accounts and recipes, we achieved this with a simple PUT request but we were able to pre-populate those fields by executing a fetch request on the page load and then spread the data across the form fields. For our recipe model, some of our form choices expected an array, we managed this with a preset of options through React Select, however we also used React Select that allowed us to create new options and save them as strings within an array. This was perfect for when users wanted to add free text in for ingredients of a recipe for example.
 
 Create a recipe 🍟
 
@@ -475,28 +472,26 @@ export default withRouter(Navbar)
 ## Speech Synthesis
 ![here](https://github.com/JessKaria/project-3/blob/main/Untitled%20design%20(5).png?raw=true)
 
-From the ideation stage, we always discussed how it would be useful it would be if the ingredients could be read out to you. I was super happy to discover a Speech Synthesis tool that I implemented on our single recipe page. More importantly however this small feature made the content more accessible to those with vision impairements. I only wish we had implemented it across the entire website.
+From the ideation stage, we always discussed how it would be useful if the ingredients could be read out to you. I was super happy to discover a Speech Synthesis tool that I implemented on our single recipe page. More importantly however this small feature made the content more accessible to those with vision impairments. I only wish we had implemented it across the entire website.
 
 ## Challenges
 
-The most challenging part for myself was working trying the best way to structure the login, registration and edit modals. The whole process from building the backend from scratch to then sending requests to the back end we built was such an enjoyable process and taught be alot about the inportance of models what back-end constraints to consider when designing a system.
+The most challenging part for myself was working trying the best way to structure the login, registration and edit modals. The whole process from building the backend from scratch to then sending requests to the back end we built was such an enjoyable process and taught me a lot about the importance of models and what back-end constraints to consider when designing a system.
 
 The second most challenging part of this project was trying to manage GIT and dealing with merge conflicts, we got over this pretty quickly, and learning this on the project was super useful.
 
 ## What I learned?
 
-* Building this project really cemented my understanding of the MVC structure, and how websites retrive and render data from databases. 
+* Building this project really cemented my understanding of the MVC structure, and how websites retrieve and render data from databases. 
 
 * I learnt a lot about testing the value of good error handling, and how to stress test forms for user errors, coming from a background in marketing this was such a valuable lesson as I saw how validation was done from the ground up.
 
-* In hindsight I think I could have been more adventurous and added some more functionality, including video or some other multi-media
+* In hindsight I think I could have been more adventurous and added some more functionality, including video or some other multimedia
 
 ## Future features
 
 * Improve the edit account, allow users to be able to reset their password.
-* Move the homeslider below fold
+* Move the home slider below fold
 * Implement Speech Synthesis across the entire site
 * Allow users to message each other
 * Allow users to follow each other
-
-
