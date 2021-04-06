@@ -1,4 +1,4 @@
-### ![GA](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png) General Assembly, SEI 
+![GA](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png) General Assembly, SEI 
 
 
 ## Hack a Snack | 7 Day Group Project 🍔 🌮 🥗
@@ -64,7 +64,7 @@ From the beginning of the project, we had a high level of communication. We kick
 
 ![here](https://github.com/JessKaria/project-3/blob/main/Timeline.png?raw=true)
 
-We worked collaboratively to design our backend, from our models right through to sudo-coding controllers, once we were agreed on the functionality and what our MVP was be then started dividing responsibility of the project.
+We worked collaboratively to design our backend, from our models right through to sudo-coding controllers, once we agreed on the functionality and what our MVP was going to be, we then started dividing responsibility of the project.
 
 * Back-end - Day 2, 3, 4
 * Front-end - Day 4, 5, 6, 7
@@ -78,7 +78,7 @@ We all collaborated on designing the user journey and with it being our first ti
 
 ## User Models
 
-It was my responsibility to deliver user registration, login, profile update and recipe editing functionality and all the supporting MVC structure. For email validation I opted to use RegEx over a package, I also decided to add in some friendly error handling which I could then render on the front end. In addition the user models also two arrays for recipes a user has saved and also posted.
+It was my responsibility to deliver user registration, login, profile update and recipe editing functionality and all the supporting MVC structure. For email validation I opted to use RegEx over a package, I also decided to add in some friendly error handling which I could then render on the front end. In addition, the user models also two arrays for recipes a user has saved and also posted.
 
 For password encryption we use bcrypt along with a mongoose validator to encrypt the passwords and validator for email verification.
 
@@ -476,7 +476,7 @@ From the ideation stage, we always discussed how it would be useful if the ingre
 
 ## Challenges
 
-The most challenging part for myself was working trying the best way to structure the login, registration and edit modals. The whole process from building the backend from scratch to then sending requests to the back end we built was such an enjoyable process and taught me a lot about the importance of models and what back-end constraints to consider when designing a system.
+The most challenging part for me was working trying the best way to structure the login, registration and edit modals. The whole process from building the backend from scratch to then sending requests to the back end we built was such an enjoyable process and taught me a lot about the importance of models and what back-end constraints to consider when designing a system.
 
 The second most challenging part of this project was trying to manage GIT and dealing with merge conflicts, we got over this pretty quickly, and learning this on the project was super useful.
 
